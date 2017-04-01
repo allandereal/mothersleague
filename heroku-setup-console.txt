@@ -1,0 +1,652 @@
+0n 2min 1s (37.2 kB/s)                                                                                                              
+AppStream cache update completed, but some metadata was ignored due to errors.
+Reading package lists... Done
+allan@allan-Dell:~$ sudo apt-get install heroku
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following NEW packages will be installed:
+  heroku
+0 upgraded, 1 newly installed, 0 to remove and 246 not upgraded.
+Need to get 14.0 MB of archives.
+After this operation, 0 B of additional disk space will be used.
+Get:1 https://cli-assets.heroku.com/branches/stable/apt ./ heroku 5.7.15-1 [14.0 MB]
+Fetched 14.0 MB in 24s (567 kB/s)                                                                                                                    
+Selecting previously unselected package heroku.
+(Reading database ... 238444 files and directories currently installed.)
+Preparing to unpack .../heroku_5.7.15-1_amd64.deb ...
+Unpacking heroku (5.7.15-1) ...
+Setting up heroku (5.7.15-1) ...
+allan@allan-Dell:~$ clear
+
+allan@allan-Dell:~$ heroku
+Enter your Heroku credentials.
+Email: ^Callan@allan-Dell:~$ 
+allan@allan-Dell:~$ heroku login
+Enter your Heroku credentials:
+Email: ahullan@gmail.com
+Password: **********
+Logged in as ahullan@gmail.com
+allan@allan-Dell:~$ php -v
+PHP 7.0.15-0ubuntu0.16.04.4 (cli) ( NTS )
+Copyright (c) 1997-2017 The PHP Group
+Zend Engine v3.0.0, Copyright (c) 1998-2017 Zend Technologies
+    with Zend OPcache v7.0.15-0ubuntu0.16.04.4, Copyright (c) 1999-2017, by Zend Technologies
+allan@allan-Dell:~$ composer -v
+   ______
+  / ____/___  ____ ___  ____  ____  ________  _____
+ / /   / __ \/ __ `__ \/ __ \/ __ \/ ___/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ (__  )  __/ /
+\____/\____/_/ /_/ /_/ .___/\____/____/\___/_/
+                    /_/
+Composer version 1.3.2 2017-01-27 18:23:41
+
+Usage:
+  command [options] [arguments]
+
+Options:
+  -h, --help                     Display this help message
+  -q, --quiet                    Do not output any message
+  -V, --version                  Display this application version
+      --ansi                     Force ANSI output
+      --no-ansi                  Disable ANSI output
+  -n, --no-interaction           Do not ask any interactive question
+      --profile                  Display timing and memory usage information
+      --no-plugins               Whether to disable plugins.
+  -d, --working-dir=WORKING-DIR  If specified, use the given directory as working directory.
+  -v|vv|vvv, --verbose           Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+
+Available commands:
+  about           Short information about Composer
+  archive         Create an archive of this composer package
+  browse          Opens the package's repository URL or homepage in your browser.
+  clear-cache     Clears composer's internal package cache.
+  clearcache      Clears composer's internal package cache.
+  config          Set config options
+  create-project  Create new project from a package into given directory.
+  depends         Shows which packages cause the given package to be installed
+  diagnose        Diagnoses the system to identify common errors.
+  dump-autoload   Dumps the autoloader
+  dumpautoload    Dumps the autoloader
+  exec            Execute a vendored binary/script
+  global          Allows running commands in the global composer dir ($COMPOSER_HOME).
+  help            Displays help for a command
+  home            Opens the package's repository URL or homepage in your browser.
+  info            Show information about packages
+  init            Creates a basic composer.json file in current directory.
+  install         Installs the project dependencies from the composer.lock file if present, or falls back on the composer.json.
+  licenses        Show information about licenses of dependencies
+  list            Lists commands
+  outdated        Shows a list of installed packages that have updates available, including their latest version.
+  prohibits       Shows which packages prevent the given package from being installed
+  remove          Removes a package from the require or require-dev
+  require         Adds required packages to your composer.json and installs them
+  run-script      Run the scripts defined in composer.json.
+  search          Search for packages
+  self-update     Updates composer.phar to the latest version.
+  selfupdate      Updates composer.phar to the latest version.
+  show            Show information about packages
+  status          Show a list of locally modified packages
+  suggests        Show package suggestions
+  update          Updates your dependencies to the latest version according to composer.json, and updates the composer.lock file.
+  validate        Validates a composer.json and composer.lock
+  why             Shows which packages cause the given package to be installed
+  why-not         Shows which packages prevent the given package from being installed
+allan@allan-Dell:~$ git -v
+Unknown option: -v
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+allan@allan-Dell:~$ git --version
+git version 2.7.4
+allan@allan-Dell:~$ mkdir heroku
+allan@allan-Dell:~$ cd heroku
+allan@allan-Dell:~/heroku$ mkdir php
+allan@allan-Dell:~/heroku$ cd php
+allan@allan-Dell:~/heroku/php$ git clone https://github.com/heroku/php-getting-started.git
+Cloning into 'php-getting-started'...
+remote: Counting objects: 182, done.
+remote: Total 182 (delta 0), reused 0 (delta 0), pack-reused 182
+Receiving objects: 100% (182/182), 48.39 KiB | 56.00 KiB/s, done.
+Resolving deltas: 100% (73/73), done.
+Checking connectivity... done.
+allan@allan-Dell:~/heroku/php$ ls
+php-getting-started
+allan@allan-Dell:~/heroku/php$ cd php-getting-started/
+allan@allan-Dell:~/heroku/php/php-getting-started$ ls
+app.json  composer.json  composer.lock  Procfile  README.md  web
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku create
+Creating app... done, ⬢ gentle-taiga-41565
+https://gentle-taiga-41565.herokuapp.com/ | https://git.heroku.com/gentle-taiga-41565.git
+allan@allan-Dell:~/heroku/php/php-getting-started$ ls
+app.json  composer.json  composer.lock  Procfile  README.md  web
+allan@allan-Dell:~/heroku/php/php-getting-started$ git push heroku master
+Counting objects: 174, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (92/92), done.
+Writing objects: 100% (174/174), 44.41 KiB | 0 bytes/s, done.
+Total 174 (delta 68), reused 174 (delta 68)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> PHP app detected
+remote: -----> Bootstrapping...
+remote: -----> Installing platform packages...
+remote:        NOTICE: No runtime required in composer.json; requirements
+remote:        from dependencies in composer.lock will be used for selection
+remote:        - php (7.1.3)
+remote:        - apache (2.4.20)
+remote:        - nginx (1.8.1)
+remote: -----> Installing dependencies...
+remote:        Composer version 1.4.1 2017-03-10 09:29:45
+remote:        Loading composer repositories with package information
+remote:        Installing dependencies from lock file
+remote:        Package operations: 12 installs, 0 updates, 0 removals
+remote:          - Installing psr/log (1.0.1): Downloading (100%)
+remote:          - Installing monolog/monolog (1.21.0): Downloading (100%)
+remote:          - Installing symfony/routing (v3.0.9): Downloading (100%)
+remote:          - Installing symfony/polyfill-mbstring (v1.2.0): Downloading (100%)
+remote:          - Installing symfony/http-foundation (v3.0.9): Downloading (100%)
+remote:          - Installing symfony/event-dispatcher (v3.0.9): Downloading (100%)
+remote:          - Installing symfony/debug (v3.1.4): Downloading (100%)
+remote:          - Installing symfony/http-kernel (v3.0.9): Downloading (100%)
+remote:          - Installing pimple/pimple (v1.1.1): Downloading (100%)
+remote:          - Installing silex/silex (v1.3.5): Downloading (100%)
+remote:          - Installing twig/twig (v1.25.0): Downloading (100%)
+remote:          - Installing symfony/twig-bridge (v2.8.11): Downloading (100%)
+remote:        Generating optimized autoload files
+remote: -----> Preparing runtime environment...
+remote: -----> Checking for additional extensions to install...
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 14.8M
+remote: -----> Launching...
+remote:        Released v3
+remote:        https://gentle-taiga-41565.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/gentle-taiga-41565.git
+ * [new branch]      master -> master
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku ps:scale web=1
+Scaling dynos... done, now running web at 1:Free
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku open
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku logs --tail
+2017-03-30T09:51:37.269857+00:00 heroku[web.1]: Starting process with command `vendor/bin/heroku-php-apache2 web/`
+2017-03-30T09:51:39.841302+00:00 app[web.1]: DOCUMENT_ROOT changed to 'web/'
+2017-03-30T09:51:39.863866+00:00 app[web.1]: Optimizing defaults for 1X dyno...
+2017-03-30T09:51:40.000419+00:00 app[web.1]: 4 processes at 128MB memory limit.
+2017-03-30T09:51:40.014970+00:00 app[web.1]: Starting php-fpm...
+2017-03-30T09:51:42.016928+00:00 app[web.1]: Starting httpd...
+2017-03-30T09:51:42.294497+00:00 heroku[web.1]: State changed from starting to up
+2017-03-30T09:52:46.124359+00:00 app[web.1]: [2017-03-30 09:52:46] myapp.INFO: Matched route "GET_". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"GET_"},"request_uri":"http://gentle-taiga-41565.herokuapp.com/"} []
+2017-03-30T09:52:46.124489+00:00 app[web.1]: [2017-03-30 09:52:46] myapp.INFO: > GET / [] []
+2017-03-30T09:52:46.124661+00:00 app[web.1]: [2017-03-30 09:52:46] myapp.DEBUG: logging output. [] []
+2017-03-30T09:52:46.155277+00:00 app[web.1]: [2017-03-30 09:52:46] myapp.INFO: < 200 [] []
+2017-03-30T09:52:46.156707+00:00 app[web.1]: 10.140.231.210 - - [30/Mar/2017:09:52:46 +0000] "GET / HTTP/1.1" 200 6804 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+2017-03-30T09:52:46.176084+00:00 heroku[router]: at=info method=GET path="/" host=gentle-taiga-41565.herokuapp.com request_id=9fce3d74-9494-456a-b1a5-6e2d8e4ef5fc fwd="45.221.73.130" dyno=web.1 connect=0ms service=64ms status=200 bytes=7001 protocol=https
+2017-03-30T09:52:46.513296+00:00 heroku[router]: at=info method=GET path="/stylesheets/main.css" host=gentle-taiga-41565.herokuapp.com request_id=1f6361c1-3b4f-438b-825b-3b6ae3f6e71f fwd="45.221.73.130" dyno=web.1 connect=0ms service=1ms status=200 bytes=836 protocol=https
+2017-03-30T09:52:46.493467+00:00 app[web.1]: 10.140.231.210 - - [30/Mar/2017:09:52:46 +0000] "GET /stylesheets/main.css HTTP/1.1" 200 605 "https://gentle-taiga-41565.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+2017-03-30T09:52:47.283299+00:00 heroku[router]: at=info method=GET path="/images/lang-logo.png" host=gentle-taiga-41565.herokuapp.com request_id=1aa77f20-6301-40fd-af96-4d74480f5e7e fwd="45.221.73.130" dyno=web.1 connect=0ms service=1ms status=200 bytes=1299 protocol=https
+2017-03-30T09:52:47.263517+00:00 app[web.1]: 10.140.231.210 - - [30/Mar/2017:09:52:47 +0000] "GET /images/lang-logo.png HTTP/1.1" 200 1066 "https://gentle-taiga-41565.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+2017-03-30T09:52:48.392638+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=gentle-taiga-41565.herokuapp.com request_id=0095fa6e-ff9c-4bac-9649-0533c005ee27 fwd="45.221.73.130" dyno=web.1 connect=1ms service=9ms status=404 bytes=15030 protocol=https
+2017-03-30T09:52:48.369435+00:00 app[web.1]: [2017-03-30 09:52:48] myapp.ERROR: Symfony\Component\HttpKernel\Exception\NotFoundHttpException: No route found for "GET /favicon.ico" (from "https://gentle-taiga-41565.herokuapp.com/") (uncaught exception) at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php line 123 {"exception":"[object] (Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException(code: 0): No route found for \"GET /favicon.ico\" (from \"https://gentle-taiga-41565.herokuapp.com/\") at /app/vendor/symfony/http-kernel/EventListener/RouterListener.php:123, Symfony\\Component\\Routing\\Exception\\ResourceNotFoundException(code: 0): No routes found for \"/favicon.ico\". at /app/vendor/symfony/routing/Matcher/UrlMatcher.php:98)"} []
+2017-03-30T09:52:48.371808+00:00 app[web.1]: [2017-03-30 09:52:48] myapp.INFO: < 404 [] []
+2017-03-30T09:52:48.372218+00:00 app[web.1]: 10.140.231.210 - - [30/Mar/2017:09:52:48 +0000] "GET /favicon.ico HTTP/1.1" 404 14818 "https://gentle-taiga-41565.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+2017-03-30T09:59:41.547008+00:00 heroku[router]: at=info method=GET path="/" host=gentle-taiga-41565.herokuapp.com request_id=66f1f2a8-32ea-4f06-9525-36b7d8afc36d fwd="45.221.73.130" dyno=web.1 connect=1ms service=10ms status=200 bytes=7001 protocol=https
+2017-03-30T09:59:41.546693+00:00 app[web.1]: [2017-03-30 09:59:41] myapp.INFO: Matched route "GET_". {"route_parameters":{"_controller":"[object] (Closure: {})","_route":"GET_"},"request_uri":"http://gentle-taiga-41565.herokuapp.com/"} []
+2017-03-30T09:59:41.546884+00:00 app[web.1]: [2017-03-30 09:59:41] myapp.INFO: > GET / [] []
+2017-03-30T09:59:41.547020+00:00 app[web.1]: [2017-03-30 09:59:41] myapp.DEBUG: logging output. [] []
+2017-03-30T09:59:41.550733+00:00 app[web.1]: [2017-03-30 09:59:41] myapp.INFO: < 200 [] []
+2017-03-30T09:59:41.551334+00:00 app[web.1]: 10.13.194.229 - - [30/Mar/2017:09:59:41 +0000] "GET / HTTP/1.1" 200 6804 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+2017-03-30T09:59:41.914106+00:00 heroku[router]: at=info method=GET path="/images/lang-logo.png" host=gentle-taiga-41565.herokuapp.com request_id=64fac36c-4ea3-4edb-9153-fd3136f23f5f fwd="45.221.73.130" dyno=web.1 connect=1ms service=2ms status=304 bytes=128 protocol=https
+2017-03-30T09:59:41.908798+00:00 heroku[router]: at=info method=GET path="/stylesheets/main.css" host=gentle-taiga-41565.herokuapp.com request_id=4583859c-37e4-41df-a0e3-15970f4f262a fwd="45.221.73.130" dyno=web.1 connect=1ms service=2ms status=304 bytes=128 protocol=https
+2017-03-30T09:59:41.913703+00:00 app[web.1]: 10.13.194.229 - - [30/Mar/2017:09:59:41 +0000] "GET /stylesheets/main.css HTTP/1.1" 304 - "https://gentle-taiga-41565.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+2017-03-30T09:59:41.913892+00:00 app[web.1]: 10.43.206.154 - - [30/Mar/2017:09:59:41 +0000] "GET /images/lang-logo.png HTTP/1.1" 304 - "https://gentle-taiga-41565.herokuapp.com/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.87 Safari/537.36
+^Callan@allan-Dell:~/heroku/php/php-getting-started$ cd web
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ ls
+images  index.php  stylesheets  views
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ sublime-text index.php
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ heroku ps
+Free dyno hours quota remaining this month: 550h 0m (100%)
+For more information on dyno sleeping and how to upgrade, see:
+https://devcenter.heroku.com/articles/dyno-sleeping
+
+=== web (Free): vendor/bin/heroku-php-apache2 web/ (1)
+web.1: idle 2017/03/30 13:32:54 +0300 (~ 1h ago)
+
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ heroku ps:scale web=0
+Scaling dynos... done, now running web at 0:Free
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ heroku ps
+Free dyno hours quota remaining this month: 550h 0m (100%)
+For more information on dyno sleeping and how to upgrade, see:
+https://devcenter.heroku.com/articles/dyno-sleeping
+
+No dynos on ⬢ gentle-taiga-41565
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ heroku ps:scale web=1
+Scaling dynos... done, now running web at 1:Free
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ heroku ps
+Free dyno hours quota remaining this month: 550h 0m (100%)
+For more information on dyno sleeping and how to upgrade, see:
+https://devcenter.heroku.com/articles/dyno-sleeping
+
+=== web (Free): vendor/bin/heroku-php-apache2 web/ (1)
+web.1: starting 2017/03/30 15:40:41 +0300 (~ 8s ago)
+
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ ls
+images  index.php  stylesheets  views
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ cd ..
+allan@allan-Dell:~/heroku/php/php-getting-started$ ls
+app.json  composer.json  composer.lock  Procfile  README.md  web
+allan@allan-Dell:~/heroku/php/php-getting-started$ composer update
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 13 installs, 0 updates, 0 removals
+  - Installing symfony/routing (v3.0.9) Downloading: 100%         
+  - Installing psr/log (1.0.2) Loading from cache
+  - Installing symfony/debug (v3.2.6) Downloading: 100%         
+  - Installing symfony/polyfill-mbstring (v1.3.0) Loading from cache
+  - Installing symfony/http-foundation (v3.0.9) Downloading: 100%         
+  - Installing symfony/event-dispatcher (v3.0.9) Downloading: 100%         
+  - Installing symfony/http-kernel (v3.0.9) Downloading: 100%         
+  - Installing pimple/pimple (v1.1.1) Downloading: 100%         
+  - Installing silex/silex (v1.3.5) Downloading: 100%         
+  - Installing monolog/monolog (1.22.1) Downloading: 100%         
+  - Installing twig/twig (v1.33.0) Downloading: 100%         
+  - Installing symfony/twig-bridge (v2.8.18) Downloading: 100%         
+  - Installing heroku/heroku-buildpack-php (v121) Downloading: 100%         
+symfony/routing suggests installing doctrine/annotations (For using the annotation loader)
+symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
+symfony/routing suggests installing symfony/dependency-injection (For loading routes from a service)
+symfony/routing suggests installing symfony/expression-language (For using expression matching)
+symfony/routing suggests installing symfony/yaml (For using the YAML loader)
+symfony/event-dispatcher suggests installing symfony/dependency-injection ()
+symfony/http-kernel suggests installing symfony/browser-kit ()
+symfony/http-kernel suggests installing symfony/class-loader ()
+symfony/http-kernel suggests installing symfony/config ()
+symfony/http-kernel suggests installing symfony/console ()
+symfony/http-kernel suggests installing symfony/dependency-injection ()
+symfony/http-kernel suggests installing symfony/finder ()
+symfony/http-kernel suggests installing symfony/var-dumper ()
+monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+symfony/twig-bridge suggests installing symfony/asset (For using the AssetExtension)
+symfony/twig-bridge suggests installing symfony/expression-language (For using the ExpressionExtension)
+symfony/twig-bridge suggests installing symfony/finder ()
+symfony/twig-bridge suggests installing symfony/form (For using the FormExtension)
+symfony/twig-bridge suggests installing symfony/security (For using the SecurityExtension)
+symfony/twig-bridge suggests installing symfony/stopwatch (For using the StopwatchExtension)
+symfony/twig-bridge suggests installing symfony/templating (For using the TwigEngine)
+symfony/twig-bridge suggests installing symfony/translation (For using the TranslationExtension)
+symfony/twig-bridge suggests installing symfony/var-dumper (For using the DumpExtension)
+symfony/twig-bridge suggests installing symfony/yaml (For using the YamlExtension)
+Writing lock file
+Generating autoload files
+allan@allan-Dell:~/heroku/php/php-getting-started$ composer require alrik11es/cowsayphp
+Using version ^1.2 for alrik11es/cowsayphp
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 1 install, 0 updates, 0 removals
+  - Installing alrik11es/cowsayphp (1.2.0) Downloading: 100%         
+Writing lock file
+Generating autoload files
+allan@allan-Dell:~/heroku/php/php-getting-started$ ls
+app.json  composer.json  composer.lock  Procfile  README.md  vendor  web
+allan@allan-Dell:~/heroku/php/php-getting-started$ git add .
+allan@allan-Dell:~/heroku/php/php-getting-started$ git commit -m "Demo"
+[master 24a76c4] Demo
+ 3 files changed, 112 insertions(+), 52 deletions(-)
+allan@allan-Dell:~/heroku/php/php-getting-started$ git push heroku master
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.69 KiB | 0 bytes/s, done.
+Total 6 (delta 5), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> PHP app detected
+remote: -----> Bootstrapping...
+remote: -----> Installing platform packages...
+remote:        NOTICE: No runtime required in composer.json; requirements
+remote:        from dependencies in composer.lock will be used for selection
+remote:        - php (7.1.3)
+remote:        - apache (2.4.20)
+remote:        - nginx (1.8.1)
+remote: -----> Installing dependencies...
+remote:        Composer version 1.4.1 2017-03-10 09:29:45
+remote:        Loading composer repositories with package information
+remote:        Installing dependencies from lock file
+remote:        Package operations: 13 installs, 0 updates, 0 removals
+remote:          - Installing alrik11es/cowsayphp (1.2.0): Downloading (100%)
+remote:          - Installing psr/log (1.0.2): Downloading (100%)
+remote:          - Installing monolog/monolog (1.22.1): Downloading (100%)
+remote:          - Installing symfony/routing (v3.0.9): Loading from cache
+remote:          - Installing symfony/polyfill-mbstring (v1.3.0): Downloading (100%)
+remote:          - Installing symfony/http-foundation (v3.0.9): Loading from cache
+remote:          - Installing symfony/event-dispatcher (v3.0.9): Loading from cache
+remote:          - Installing symfony/debug (v3.2.6): Downloading (100%)
+remote:          - Installing symfony/http-kernel (v3.0.9): Loading from cache
+remote:          - Installing pimple/pimple (v1.1.1): Loading from cache
+remote:          - Installing silex/silex (v1.3.5): Loading from cache
+remote:          - Installing twig/twig (v1.33.0): Downloading (100%)
+remote:          - Installing symfony/twig-bridge (v2.8.18): Downloading (100%)
+remote:        Generating optimized autoload files
+remote: -----> Preparing runtime environment...
+remote: -----> Checking for additional extensions to install...
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 14.8M
+remote: -----> Launching...
+remote:        Released v4
+remote:        https://gentle-taiga-41565.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy.... done.
+To https://git.heroku.com/gentle-taiga-41565.git
+   9e1f03e..24a76c4  master -> master
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku open cowsay
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku addons:create papertrail
+Creating papertrail on ⬢ gentle-taiga-41565... !
+ ▸    Please verify your account to install this add-on plan (please enter a credit card) For more information, see
+ ▸    https://devcenter.heroku.com/categories/billing Verify now at https://heroku.com/verify
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku addons
+No add-ons for app gentle-taiga-41565.
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku run "php -a"
+Running php -a on ⬢ gentle-taiga-41565... up, run.4657 (Free)
+Interactive shell
+
+php > echo PHP_VERSION;
+7.1.3
+php > $a=12;
+php > echo $a
+php > echo $a;
+PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in php shell code on line 2
+php > echo $a;
+12
+php > quit
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku run bash
+Running bash on ⬢ gentle-taiga-41565... up, run.2984 (Free)
+~ $ ls
+Procfile  README.md  app.json  composer.json  composer.lock  vendor  web
+~ $ dir
+Procfile  README.md  app.json  composer.json  composer.lock  vendor  web
+~ $ cd web
+~/web $ ls
+images	index.php  stylesheets	views
+~/web $ images
+bash: images: command not found
+~/web $ cd images
+~/web/images $ ls
+favicon.png  lang-logo.png
+~/web/images $ favicon.png
+bash: favicon.png: command not found
+~/web/images $ open favicon.png
+bash: open: command not found
+~/web/images $ exit
+exit
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku config:set TIMES=20
+Setting TIMES and restarting ⬢ gentle-taiga-41565... done, v5
+TIMES: 20
+allan@allan-Dell:~/heroku/php/php-getting-started$ git add .
+allan@allan-Dell:~/heroku/php/php-getting-started$ git commit -m "define config variable TIME"
+[master db6da5b] define config variable TIME
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+allan@allan-Dell:~/heroku/php/php-getting-started$ git push heroku master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 409 bytes | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> PHP app detected
+remote: -----> Bootstrapping...
+remote: -----> Installing platform packages...
+remote:        NOTICE: No runtime required in composer.json; requirements
+remote:        from dependencies in composer.lock will be used for selection
+remote:        - php (7.1.3)
+remote:        - apache (2.4.20)
+remote:        - nginx (1.8.1)
+remote: -----> Installing dependencies...
+remote:        Composer version 1.4.1 2017-03-10 09:29:45
+remote:        Loading composer repositories with package information
+remote:        Installing dependencies from lock file
+remote:        Package operations: 13 installs, 0 updates, 0 removals
+remote:          - Installing alrik11es/cowsayphp (1.2.0): Loading from cache
+remote:          - Installing psr/log (1.0.2): Loading from cache
+remote:          - Installing monolog/monolog (1.22.1): Loading from cache
+remote:          - Installing symfony/routing (v3.0.9): Loading from cache
+remote:          - Installing symfony/polyfill-mbstring (v1.3.0): Loading from cache
+remote:          - Installing symfony/http-foundation (v3.0.9): Loading from cache
+remote:          - Installing symfony/event-dispatcher (v3.0.9): Loading from cache
+remote:          - Installing symfony/debug (v3.2.6): Loading from cache
+remote:          - Installing symfony/http-kernel (v3.0.9): Loading from cache
+remote:          - Installing pimple/pimple (v1.1.1): Loading from cache
+remote:          - Installing silex/silex (v1.3.5): Loading from cache
+remote:          - Installing twig/twig (v1.33.0): Loading from cache
+remote:          - Installing symfony/twig-bridge (v2.8.18): Loading from cache
+remote:        Generating optimized autoload files
+remote: -----> Preparing runtime environment...
+remote: -----> Checking for additional extensions to install...
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 14.8M
+remote: -----> Launching...
+remote:        Released v6
+remote:        https://gentle-taiga-41565.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/gentle-taiga-41565.git
+   24a76c4..db6da5b  master -> master
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku config
+=== gentle-taiga-41565 Config Vars
+TIMES: 20
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku addons:create heroku-postgresql:hobby-dev
+Creating heroku-postgresql:hobby-dev on ⬢ gentle-taiga-41565... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-dimensional-31075 as DATABASE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku-postgresql
+heroku-postgresql: command not found
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku heroku-postgresql
+ ▸    heroku-postgresql is not a heroku command.
+ ▸    Perhaps you meant psql?
+ ▸    Run heroku _ to run heroku psql.
+ ▸    Run heroku help for a list of available commands.
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku config
+=== gentle-taiga-41565 Config Vars
+DATABASE_URL: postgres://pdncyfotkpntbu:380da0ab89c47ddbce3ffc14ec0ec504ecdd59b933f48e624aa9e6f65735ad39@ec2-107-20-163-238.compute-1.amazonaws.com:5432/dfugrtbvq3nr1m
+TIMES:        20
+allan@allan-Dell:~/heroku/php/php-getting-started$ composer require herrera-io/silex-pdo
+Using version ^1.2 for herrera-io/silex-pdo
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Package operations: 2 installs, 0 updates, 0 removals
+  - Installing herrera-io/pdo-log (1.0.0) Downloading: 100%         
+  - Installing herrera-io/silex-pdo (1.2.1) Downloading: 100%         
+Package herrera-io/pdo-log is abandoned, you should avoid using it. No replacement was suggested.
+Package herrera-io/silex-pdo is abandoned, you should avoid using it. No replacement was suggested.
+Writing lock file
+Generating autoload files
+allan@allan-Dell:~/heroku/php/php-getting-started$ sudo composer require herrera-io/silex-pdo
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+Using version ^1.2 for herrera-io/silex-pdo
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Nothing to install or update
+Package herrera-io/pdo-log is abandoned, you should avoid using it. No replacement was suggested.
+Package herrera-io/silex-pdo is abandoned, you should avoid using it. No replacement was suggested.
+Generating autoload files
+allan@allan-Dell:~/heroku/php/php-getting-started$ composer update
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+Nothing to install or update
+Package herrera-io/pdo-log is abandoned, you should avoid using it. No replacement was suggested.
+Package herrera-io/silex-pdo is abandoned, you should avoid using it. No replacement was suggested.
+Generating autoload files
+allan@allan-Dell:~/heroku/php/php-getting-started$ cd web
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ cd views
+allan@allan-Dell:~/heroku/php/php-getting-started/web/views$ ls
+header.html  index.twig  layout.html  nav.html
+allan@allan-Dell:~/heroku/php/php-getting-started/web/views$ sublime-text database.twig
+allan@allan-Dell:~/heroku/php/php-getting-started/web/views$ ls
+database.twig  header.html  index.twig  layout.html  nav.html
+allan@allan-Dell:~/heroku/php/php-getting-started/web/views$ vi database.twig 
+allan@allan-Dell:~/heroku/php/php-getting-started/web/views$ cd ..
+allan@allan-Dell:~/heroku/php/php-getting-started/web$ cd ..
+allan@allan-Dell:~/heroku/php/php-getting-started$ git add .
+allan@allan-Dell:~/heroku/php/php-getting-started$ git commit -m "added database access"
+[master da53c64] added database access
+ 4 files changed, 156 insertions(+), 2 deletions(-)
+ create mode 100644 web/views/database.twig
+allan@allan-Dell:~/heroku/php/php-getting-started$ git push heroku master
+Counting objects: 8, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 2.03 KiB | 0 bytes/s, done.
+Total 8 (delta 5), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> PHP app detected
+remote: -----> Bootstrapping...
+remote: -----> Installing platform packages...
+remote:        NOTICE: No runtime required in composer.json; requirements
+remote:        from dependencies in composer.lock will be used for selection
+remote:        - php (7.1.3)
+remote:        - apache (2.4.20)
+remote:        - nginx (1.8.1)
+remote: -----> Installing dependencies...
+remote:        Composer version 1.4.1 2017-03-10 09:29:45
+remote:        Loading composer repositories with package information
+remote:        Installing dependencies from lock file
+remote:        Package operations: 15 installs, 0 updates, 0 removals
+remote:          - Installing alrik11es/cowsayphp (1.2.0): Loading from cache
+remote:          - Installing symfony/routing (v3.0.9): Loading from cache
+remote:          - Installing symfony/polyfill-mbstring (v1.3.0): Loading from cache
+remote:          - Installing symfony/http-foundation (v3.0.9): Loading from cache
+remote:          - Installing symfony/event-dispatcher (v3.0.9): Loading from cache
+remote:          - Installing psr/log (1.0.2): Loading from cache
+remote:          - Installing symfony/debug (v3.2.6): Loading from cache
+remote:          - Installing symfony/http-kernel (v3.0.9): Loading from cache
+remote:          - Installing pimple/pimple (v1.1.1): Loading from cache
+remote:          - Installing silex/silex (v1.3.5): Loading from cache
+remote:          - Installing herrera-io/pdo-log (1.0.0): Downloading (100%)
+remote:          - Installing herrera-io/silex-pdo (1.2.1): Downloading (100%)
+remote:          - Installing monolog/monolog (1.22.1): Loading from cache
+remote:          - Installing twig/twig (v1.33.0): Loading from cache
+remote:          - Installing symfony/twig-bridge (v2.8.18): Loading from cache
+remote:        Package herrera-io/pdo-log is abandoned, you should avoid using it. No replacement was suggested.
+remote:        Package herrera-io/silex-pdo is abandoned, you should avoid using it. No replacement was suggested.
+remote:        Generating optimized autoload files
+remote: -----> Preparing runtime environment...
+remote: -----> Checking for additional extensions to install...
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 14.8M
+remote: -----> Launching...
+remote:        Released v8
+remote:        https://gentle-taiga-41565.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/gentle-taiga-41565.git
+   db6da5b..da53c64  master -> master
+allan@allan-Dell:~/heroku/php/php-getting-started$ heroku pg:psql
+--> Connecting to postgresql-dimensional-31075
+psql (9.5.4, server 9.6.1)
+WARNING: psql major version 9.5, server major version 9.6.
+         Some psql features might not work.
+SSL connection (protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
+
+gentle-taiga-41565::DATABASE=> create table test_table (id integer, name text);
+CREATE TABLE
+gentle-taiga-41565::DATABASE=> insert into test_table values (1, 'hello database');
+INSERT 0 1
+gentle-taiga-41565::DATABASE=> insert into test_table values (2, 'hello database 2');
+INSERT 0 1
+gentle-taiga-41565::DATABASE=> \q
+allan@allan-Dell:~/heroku/php/php-getting-started$ git add .
+allan@allan-Dell:~/heroku/php/php-getting-started$ git commit -m "restored home page"
+[master d0b3506] restored home page
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+allan@allan-Dell:~/heroku/php/php-getting-started$ git push heroku master
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 354 bytes | 0 bytes/s, done.
+Total 4 (delta 3), reused 0 (delta 0)
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> PHP app detected
+remote: -----> Bootstrapping...
+remote: -----> Installing platform packages...
+remote:        NOTICE: No runtime required in composer.json; requirements
+remote:        from dependencies in composer.lock will be used for selection
+remote:        - php (7.1.3)
+remote:        - apache (2.4.20)
+remote:        - nginx (1.8.1)
+remote: -----> Installing dependencies...
+remote:        Composer version 1.4.1 2017-03-10 09:29:45
+remote:        Loading composer repositories with package information
+remote:        Installing dependencies from lock file
+remote:        Package operations: 15 installs, 0 updates, 0 removals
+remote:          - Installing alrik11es/cowsayphp (1.2.0): Loading from cache
+remote:          - Installing symfony/routing (v3.0.9): Loading from cache
+remote:          - Installing symfony/polyfill-mbstring (v1.3.0): Loading from cache
+remote:          - Installing symfony/http-foundation (v3.0.9): Loading from cache
+remote:          - Installing symfony/event-dispatcher (v3.0.9): Loading from cache
+remote:          - Installing psr/log (1.0.2): Loading from cache
+remote:          - Installing symfony/debug (v3.2.6): Loading from cache
+remote:          - Installing symfony/http-kernel (v3.0.9): Loading from cache
+remote:          - Installing pimple/pimple (v1.1.1): Loading from cache
+remote:          - Installing silex/silex (v1.3.5): Loading from cache
+remote:          - Installing herrera-io/pdo-log (1.0.0): Loading from cache
+remote:          - Installing herrera-io/silex-pdo (1.2.1): Loading from cache
+remote:          - Installing monolog/monolog (1.22.1): Loading from cache
+remote:          - Installing twig/twig (v1.33.0): Loading from cache
+remote:          - Installing symfony/twig-bridge (v2.8.18): Loading from cache
+remote:        Package herrera-io/pdo-log is abandoned, you should avoid using it. No replacement was suggested.
+remote:        Package herrera-io/silex-pdo is abandoned, you should avoid using it. No replacement was suggested.
+remote:        Generating optimized autoload files
+remote: -----> Preparing runtime environment...
+remote: -----> Checking for additional extensions to install...
+remote: -----> Discovering process types
+remote:        Procfile declares types -> web
+remote: 
+remote: -----> Compressing...
+remote:        Done: 14.8M
+remote: -----> Launching...
+remote:        Released v9
+remote:        https://gentle-taiga-41565.herokuapp.com/ deployed to Heroku
+remote: 
+remote: Verifying deploy... done.
+To https://git.heroku.com/gentle-taiga-41565.git
+   da53c64..d0b3506  master -> master
+allan@allan-Dell:~/heroku/php/php-getting-started$ 
+0000000000000000000
