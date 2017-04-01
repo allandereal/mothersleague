@@ -1,5 +1,31 @@
 <?php
 
+//db connection postgresql
+$dbopts = parse_url(getenv('DATABASE_URL'));
+$app->register(new Herrera\Pdo\PdoServiceProvider(),
+               array(
+                   'pdo.dsn' => 'pgsql:dbname='.ltrim($dbopts["path"],'/').';host='.$dbopts["host"] . ';port=' . $dbopts["port"],
+                   'pdo.username' => $dbopts["user"],
+                   'pdo.password' => $dbopts["pass"]
+               )
+);
+
+//query db
+$app->get('/db/', function() use($app) {
+  $st = $app['pdo']->prepare('SELECT name FROM mother');
+  $st->execute();
+
+  $names = array();
+  while ($row = $st->fetch(PDO::FETCH_ASSOC)) {
+    $app['monolog']->addDebug('Row ' . $row['name']);
+    $names[] = $row;
+  }
+
+  for ($i=1 ,$i<count($names),$i++){
+  	echo "<h3>".$names[$i]."</h3>";
+  }
+});
+
 //the bot
 // Report all errors except E_NOTICE
 // This is the default value set in php.ini
