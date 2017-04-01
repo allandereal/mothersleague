@@ -47,7 +47,7 @@ if ($verify_token === $VERIFY_TOKEN) {
   // **************************
 
   print "<h1>Hello World!</h1>"; // Please delete this line on step 8.
-  //echo '<img src="/images/preg.jpg" alt="Preg Image" />';
+  echo '<img src="/images/preg.jpg" alt="Preg Image" />';
 
 }
 
