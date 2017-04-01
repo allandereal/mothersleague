@@ -27,7 +27,7 @@ if ($verify_token === $VERIFY_TOKEN) {
 
     if(!empty($message)){
       if($message == 'image-preg'){
-        send_image_message($sender,'/images/preg.jpg', $PAGE_ACCESS_TOKEN);
+        send_image_message($sender,'https://mothersleague.herokuapp.com/images/preg.jpg', $PAGE_ACCESS_TOKEN);
       }
       elseif($message == 'image-mark'){
         send_image_message($sender,'http://www.tmcg.co.ug/wp-content/uploads/2016/03/John-Mark-Bwanika-300x300.jpg', $PAGE_ACCESS_TOKEN);
@@ -46,8 +46,8 @@ if ($verify_token === $VERIFY_TOKEN) {
 
   // **************************
 
-  print "<h1>Hello World!</h1>"; // Please delete this line on step 8.
-  echo '<img src="/images/preg.jpg" alt="Preg Image" />';
+  print "<h2>Welcome to the Mothers League</h2>"; // Please delete this line on step 8.
+  //echo '<img src="/images/preg.jpg" alt="Preg Image" />';
 
 }
 
